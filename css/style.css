@@ -1,0 +1,190 @@
+:root {
+  --font-size: 1.6rem;
+  --color-white: #fff;
+  --color-light-grey: #999;
+  --color-dark-grey: #333;
+  --color-black: #37352f;
+  --color-blue: #337ea9;
+  --color-green: #478563;
+}
+
+html {
+  font-size: 62.5%;
+  --background-color: var(--color-white);
+  --text-color: var(--color-black);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-size: var(--font-size);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+
+/* Cover */
+
+.cover {
+  width: 100%;
+  height: 30vh;
+}
+
+.cover img {
+  object-fit: cover;
+}
+
+/* Self Photo */
+
+.self-pic {
+  position: absolute;
+  width: 12rem;
+  left: 10vw;
+  top: 20vh;
+}
+
+.self-pic img {
+  border-radius: 10px;
+}
+
+/* Main */
+
+.main {
+  padding: 10vw;
+  overflow: hidden;
+}
+
+/* Article */
+
+.article {
+  position: relative;
+  margin: 5rem 0;
+}
+
+.article__title {
+  font-size: 3rem;
+  color: var(--color-blue);
+}
+
+.article__list {
+  padding-left: 0.5rem;
+  list-style: none;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.article::after {
+  --width: 70%;
+  display: inline-block;
+  position: absolute;
+  content: "";
+  width: var(--width);
+  right: calc(var(--width) / 4);
+  margin-top: 1.5rem;
+  height: 1px;
+  background-color: var(--color-light-grey);
+}
+
+/* Section */
+
+/* .section {
+} */
+
+.section__title {
+  font-size: 2.4rem;
+}
+
+.section__list {
+  padding-left: 2rem;
+}
+
+.article__list > li {
+  margin: 1rem 0;
+}
+
+/* Section inside Section */
+
+/* .section__section {
+} */
+
+.section__section__title {
+  font-size: 2rem;
+}
+
+/* Quote */
+
+.quote {
+  position: relative;
+  padding-left: 1em;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  width: 2.5px;
+  height: 100%;
+  left: 0;
+  background: var(--text-color);
+}
+
+/* Caption */
+
+.caption {
+  color: var(--color-light-grey);
+  font-style: italic;
+}
+
+/* Skill */
+
+.skill__list {
+  padding: 0 0 0 2rem;
+  display: grid;
+  grid-template: repeat(3, 2.5rem) / repeat(3, 33%);
+  grid-auto-flow: column;
+}
+
+/* My Name */
+
+.my-name {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+/* FontAwesome */
+
+.fa {
+  width: 2rem;
+  padding-left: 0;
+}
+
+/* Link */
+
+.link {
+  text-decoration: none;
+  color: #999;
+}
+
+/* Green */
+
+.green-text {
+  color: var(--color-green);
+}
+
+/* Dark Toggle Button */
+
+#toggle-dark-mode {
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  display: grid;
+  place-content: center;
+  background: var(--text-color);
+  width: 5rem;
+  height: 5rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  color: yellow;
+}
