@@ -34,6 +34,14 @@ body {
   object-fit: cover;
 }
 
+
+@media screen and (min-width: 426px) {
+  .cover {
+    height: 45vh;
+    max-height: 40rem;
+  }
+}
+
 /* Self Photo */
 
 .self-pic {
@@ -47,11 +55,29 @@ body {
   border-radius: 10px;
 }
 
+
+@media screen and (min-width: 426px) {
+  .self-pic {
+    width: 15vw;
+    max-width: 20rem;
+    left: 25vw;
+    top: 35vh;
+  }
+}
+
 /* Main */
 
 .main {
   padding: 10vw;
   overflow: hidden;
+}
+
+@media screen and (min-width: 426px) {
+  .main {
+    padding-top: 10vw;
+    padding-left: 25vw;
+  }
+
 }
 
 /* Article */
@@ -114,11 +140,33 @@ body {
   font-size: 2rem;
 }
 
+@media screen and (min-width: 426px) {
+  .section--row {
+    display: flex;
+    width: 100%;    
+  }
+
+  .section--row .section__section__title,
+  .section--row .section__title {
+    flex: 0 0 25%;
+    /* text-align: center; */
+    margin: 2rem 2rem 0 0.5rem ;
+  }
+
+  .section__section__desc {
+    flex: 0 0 65%;
+    max-width: 75ch;
+    text-overflow: ellipsis;
+  }
+
+}
+
 /* Quote */
 
 .quote {
   position: relative;
   padding-left: 1em;
+  max-width: 75ch;
 }
 
 .quote::before {
@@ -142,8 +190,14 @@ body {
 .skill__list {
   padding: 0 0 0 2rem;
   display: grid;
-  grid-template: repeat(3, 2.5rem) / repeat(3, 33%);
+  grid-template: repeat(3, 2.5rem) / repeat(3, 40%);
   grid-auto-flow: column;
+}
+
+@media screen and (min-width: 426px) {
+  .skill__list {
+    grid-template: repeat(5, 2.5rem) / repeat(2, 40%);
+  }
 }
 
 /* My Name */
