@@ -266,3 +266,12 @@ body {
 .toggle-moon:active {
   height: 0;
 }
+
+.fa-solid {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out 50ms;
+}
+
+.toggle-moon:active .fa-solid {
+  opacity: 0;
+}
