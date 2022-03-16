@@ -19,7 +19,7 @@ body {
   color: var(--text-color);
   font-size: var(--font-size);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 0;
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
@@ -38,7 +38,6 @@ body {
   top: 0;
   transition: opacity 200ms ease-in-out;
 }
-
 
 @media screen and (min-width: 426px) {
   .cover {
@@ -59,7 +58,6 @@ body {
 .self-pic img {
   border-radius: 10px;
 }
-
 
 @media screen and (min-width: 426px) {
   .self-pic {
@@ -82,7 +80,6 @@ body {
     padding-top: 10vw;
     padding-left: 25vw;
   }
-
 }
 
 /* Article */
@@ -148,14 +145,16 @@ body {
 @media screen and (min-width: 426px) {
   .section--row {
     display: flex;
-    width: 100%;    
+    width: 100%;
+    align-items: center;
   }
 
   .section--row .section__section__title,
   .section--row .section__title {
     flex: 0 0 25%;
-    /* text-align: center; */
-    margin: 2rem 2rem 0 0.5rem ;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+    /* margin: 0 2rem 0 0.5rem; */
   }
 
   .section__section__desc {
@@ -163,7 +162,6 @@ body {
     max-width: 75ch;
     text-overflow: ellipsis;
   }
-
 }
 
 /* Quote */
