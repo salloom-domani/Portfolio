@@ -41,7 +41,7 @@ body {
 
 @media screen and (min-width: 426px) {
   .cover {
-    height: 45vh;
+    height: 35vh;
     max-height: 40rem;
   }
 }
@@ -50,9 +50,9 @@ body {
 
 .self-pic {
   position: absolute;
-  width: 12rem;
-  left: 10vw;
-  top: 20vh;
+  width: 10rem;
+  left: 12vw;
+  top: min(22vh, 40rem);
 }
 
 .self-pic img {
@@ -61,24 +61,30 @@ body {
 
 @media screen and (min-width: 426px) {
   .self-pic {
-    width: 15vw;
+    width: 12rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .self-pic {
+    width: 15rem;
     max-width: 20rem;
-    left: 25vw;
-    top: 35vh;
+    left: 25%;
+    top: 25vh;
   }
 }
 
 /* Main */
 
 .main {
-  padding: 10vw;
+  padding: 5vw 12vw;
   overflow: hidden;
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 768px) {
   .main {
-    padding-top: 10vw;
-    padding-left: 25vw;
+    padding-top: 5vw;
+    padding-left: 25%;
   }
 }
 
@@ -164,6 +170,42 @@ body {
   }
 }
 
+
+/* Skill */
+
+.section__list--skill {
+  padding: 0 0 0 2rem;
+  display: grid;
+  grid-template: repeat(3, 2.5rem) / repeat(3, 40%);
+  grid-auto-flow: column;
+}
+
+@media screen and (min-width: 426px) {
+
+  .section__list--skill {
+    grid-template: repeat(3, 3rem) / repeat(3, 33%);
+  }
+
+  .section--row .section__title--skill {
+    flex: 0 0 35%;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+  }
+  
+  .section--row .section__list--skill {
+    flex: 0 0 65%;
+  }
+
+}
+
+
+/* My Name */
+
+.my-name {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
 /* Quote */
 
 .quote {
@@ -181,35 +223,6 @@ body {
   background: var(--text-color);
 }
 
-/* Caption */
-
-.caption {
-  color: var(--color-light-grey);
-  font-style: italic;
-}
-
-/* Skill */
-
-.skill__list {
-  padding: 0 0 0 2rem;
-  display: grid;
-  grid-template: repeat(3, 2.5rem) / repeat(3, 40%);
-  grid-auto-flow: column;
-}
-
-@media screen and (min-width: 426px) {
-  .skill__list {
-    grid-template: repeat(5, 2.5rem) / repeat(2, 40%);
-  }
-}
-
-/* My Name */
-
-.my-name {
-  font-size: 4rem;
-  font-weight: bold;
-}
-
 /* FontAwesome */
 
 .fa {
@@ -221,6 +234,7 @@ body {
 
 .link {
   text-decoration: none;
+  white-space: nowrap;
   color: #999;
 }
 
@@ -228,6 +242,19 @@ body {
 
 .green-text {
   color: var(--color-green);
+}
+
+/* Caption */
+
+.caption {
+  color: var(--color-light-grey);
+  font-style: italic;
+}
+
+/* Date */
+
+.date {
+  white-space: nowrap;
 }
 
 /* Dark Toggle Button */
