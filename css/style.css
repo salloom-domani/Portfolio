@@ -46,6 +46,12 @@ body {
   }
 }
 
+@media screen and (max-height: 425px) {
+  .cover {
+    min-height: 20rem ;
+  }
+}
+
 /* Self Photo */
 
 .self-pic {
