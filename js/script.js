@@ -1,5 +1,6 @@
 const body = document.querySelector("html");
 const toggleDarkMode = document.getElementById("toggle-dark-mode");
+const toggleMoon = document.querySelector(".toggle-moon");
 const darkCover = document.getElementById("dark-cover");
 const lightCover = document.getElementById("light-cover");
 const moon = document.querySelector(".fa-moon");
@@ -34,7 +35,13 @@ toggleDarkMode.addEventListener("click", () => {
   setTimeout(() => {
       moon.classList.toggle('fa-moon');
       moon.classList.toggle('fa-sun');
-  }, 100)
+  }, 200);
+
+  toggleMoon.classList.add('active');
+
+  setTimeout(() =>{
+    toggleMoon.classList.remove('active');
+  }, 400);
 
   toggleDarkMode.dark = !toggleDarkMode.dark;
 });
