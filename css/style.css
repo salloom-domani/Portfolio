@@ -182,14 +182,39 @@ body {
 .section__list--skill {
   padding: 0 0 0 2rem;
   display: grid;
-  grid-template: repeat(3, 2.5rem) / repeat(3, 40%);
+  grid-template: repeat(3, 3.5rem) / repeat(3, 40%);
   grid-auto-flow: column;
 }
+
+.skill__item::after {
+  content: "⭐";
+  display: block;
+  text-align: start;
+  font-size: .5em;
+}
+
+.skill--2::after {
+  content: "⭐⭐";
+}
+
+.skill--3::after {
+  content: "⭐⭐⭐";
+}
+
+.skill--4::after {
+  content: "⭐⭐⭐⭐";
+}
+
+.skill--5::after {
+  content: "⭐⭐⭐⭐⭐";
+}
+
+
 
 @media screen and (min-width: 426px) {
 
   .section__list--skill {
-    grid-template: repeat(3, 3rem) / repeat(3, 33%);
+    grid-template-columns: repeat(3, 33%);
   }
 
   .section--row .section__title--skill {
