@@ -24,6 +24,49 @@ body {
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
+/* Composition */
+
+
+@media screen and (min-width: 426px) {
+  .row {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+
+  .row .subsection__title,
+  .row .section__title {
+    flex: 0 0 35%;
+    margin-right: 0.5rem;
+    margin-top: 0rem;
+  }
+
+  .row .section__list {
+    flex: 0 0 65%;
+  }
+}
+
+
+/* Utility */
+
+
+.quote {
+  position: relative;
+  padding-left: 1em;
+  max-width: 75ch;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  width: 2.5px;
+  height: 100%;
+  left: 0;
+  background: var(--text-color);
+}
+
+/* Block */
+
 /* Cover */
 
 .cover {
@@ -130,9 +173,6 @@ body {
 
 /* Section */
 
-/* .section {
-} */
-
 .section__title {
   font-size: 2.4rem;
 }
@@ -145,31 +185,14 @@ body {
   margin: 1rem 0;
 }
 
-/* Section inside Section */
+/* Subsection */
 
-/* .section__section {
-} */
-
-.section__section__title {
+.subsection__title {
   font-size: 2rem;
 }
 
 @media screen and (min-width: 426px) {
-  .section--row {
-    display: flex;
-    width: 100%;
-    align-items: center;
-  }
-
-  .section--row .section__section__title,
-  .section--row .section__title {
-    flex: 0 0 25%;
-    margin-right: 0.5rem;
-    margin-top: 0rem;
-    /* margin: 0 2rem 0 0.5rem; */
-  }
-
-  .section__section__desc {
+  .subsection__desc {
     flex: 0 0 65%;
     max-width: 75ch;
     text-overflow: ellipsis;
@@ -179,7 +202,7 @@ body {
 
 /* Skill */
 
-.section__list--skill {
+.section--skill .section__list {
   padding: 0 0 0 2rem;
   display: grid;
   grid-template: repeat(3, 3.5rem) / repeat(3, 40%);
@@ -193,40 +216,12 @@ body {
   font-size: .5em;
 }
 
-.skill--2::after {
-  content: "⭐⭐";
-}
-
-.skill--3::after {
-  content: "⭐⭐⭐";
-}
-
-.skill--4::after {
-  content: "⭐⭐⭐⭐";
-}
-
-.skill--5::after {
-  content: "⭐⭐⭐⭐⭐";
-}
-
-
 
 @media screen and (min-width: 426px) {
 
-  .section__list--skill {
+  .section--skill .section__list {
     grid-template-columns: repeat(3, 33%);
   }
-
-  .section--row .section__title--skill {
-    flex: 0 0 35%;
-    margin-right: 0.5rem;
-    margin-top: 0rem;
-  }
-  
-  .section--row .section__list--skill {
-    flex: 0 0 65%;
-  }
-
 }
 
 
@@ -235,23 +230,6 @@ body {
 .my-name {
   font-size: 4rem;
   font-weight: bold;
-}
-
-/* Quote */
-
-.quote {
-  position: relative;
-  padding-left: 1em;
-  max-width: 75ch;
-}
-
-.quote::before {
-  content: "";
-  position: absolute;
-  width: 2.5px;
-  height: 100%;
-  left: 0;
-  background: var(--text-color);
 }
 
 /* FontAwesome */
@@ -291,15 +269,16 @@ body {
 /* Dark Toggle Button */
 
 #toggle-dark-mode {
+  --toggle-size: 5rem;
   position: fixed;
-  bottom: 2.5rem;
-  right: 2.5rem;
+  bottom: calc(var(--toggle-size)/2);
+  right: calc(var(--toggle-size)/2);
   display: grid;
   place-content: center;
   background: var(--background-color);
-  width: 5rem;
-  height: 5rem;
-  font-size: 3rem;
+  width: var(--toggle-size);
+  height: var(--toggle-size);
+  font-size: calc(var(--toggle-size)/1.5);
   border-radius: 50%;
   color: gold;
   transition: backgorund-color 400ms ease-in-out;
@@ -308,11 +287,10 @@ body {
 }
 
 .toggle-moon {
-  height: 5rem;
-  width: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: var(--toggle-size);
+  width: var(--toggle-size);
+  display: grid;
+  place-content: center;
   border-radius: 50%;
   overflow: hidden;
   background: var(--text-color);
@@ -334,4 +312,27 @@ body {
   100% {
     height: 5rem;
   }
+}
+
+
+/* Exception */
+
+.skill__item[data-state='5-star']::after {
+  content: "⭐⭐⭐⭐⭐";
+}
+
+.skill__item[data-state='4-star']::after {
+  content: "⭐⭐⭐⭐";
+}
+
+.skill__item[data-state='3-star']::after {
+  content: "⭐⭐⭐";
+}
+
+.skill__item[data-state='2-star']::after {
+  content: "⭐⭐";
+}
+
+.skill__item[data-state='1-star']::after {
+  content: "⭐";
 }
