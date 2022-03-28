@@ -1,2 +1,2 @@
 # Portfolio
-more like a resume
+A basic resume page built using html-css-javascript inspired by notion style. 
