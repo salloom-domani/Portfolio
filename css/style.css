@@ -29,7 +29,7 @@ body {
   transition: background-color 200ms ease-in-out, color 200ms ease-in-out;
 }
 
-/* Composition */
+/* ---------- Composition ---------- */
 
 
 @media screen and (min-width: 426px) {
@@ -59,7 +59,7 @@ body {
 }
 
 
-/* Utility */
+/* ---------- Utility ---------- */
 
 
 .quote {
@@ -88,7 +88,7 @@ body {
   align-items: center;
 }
 
-/* Block */
+/* ---------- Block ---------- */
 
 /* Top banner */
 
@@ -294,6 +294,30 @@ body {
   white-space: nowrap;
 }
 
+
+/* ---------- Exception ---------- */
+
+.skill__item[data-state='5-star']::after {
+  content: "⭐⭐⭐⭐⭐";
+}
+
+.skill__item[data-state='4-star']::after {
+  content: "⭐⭐⭐⭐";
+}
+
+.skill__item[data-state='3-star']::after {
+  content: "⭐⭐⭐";
+}
+
+.skill__item[data-state='2-star']::after {
+  content: "⭐⭐";
+}
+
+.skill__item[data-state='1-star']::after {
+  content: "⭐";
+}
+
+
 /* Dark Toggle Button */
 
 #toggle-dark-mode {
@@ -329,27 +353,4 @@ body {
   50% {
     height: 0;
   }
-}
-
-
-/* Exception */
-
-.skill__item[data-state='5-star']::after {
-  content: "⭐⭐⭐⭐⭐";
-}
-
-.skill__item[data-state='4-star']::after {
-  content: "⭐⭐⭐⭐";
-}
-
-.skill__item[data-state='3-star']::after {
-  content: "⭐⭐⭐";
-}
-
-.skill__item[data-state='2-star']::after {
-  content: "⭐⭐";
-}
-
-.skill__item[data-state='1-star']::after {
-  content: "⭐";
 }
