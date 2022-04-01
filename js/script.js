@@ -1,11 +1,11 @@
 function toggleDark() {
-  html.style.setProperty("--background-color", "#222");
-  html.style.setProperty("--text-color", "#fff");
+  html.style.setProperty("--background-color", "var(--color-black)");
+  html.style.setProperty("--text-color", "#eee");
 }
 
 function toggleLight() {
-  html.style.setProperty("--background-color", "#fff");
-  html.style.setProperty("--text-color", "#37352f");
+  html.style.setProperty("--background-color", "var(--color-white)");
+  html.style.setProperty("--text-color", "var(--color-black)");
 }
 
 function toggleIcon() {

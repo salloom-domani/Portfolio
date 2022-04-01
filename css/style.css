@@ -7,7 +7,7 @@
   --color-white: #fff;
   --color-light-grey: #999;
   --color-dark-grey: #333;
-  --color-black: #37352f;
+  --color-black: #202124;
   --color-blue: #337ea9;
   --color-purple: #9065b0;
   --color-green: #478563;
@@ -100,7 +100,7 @@ body {
 
 #cover-logo {
   fill: var(--background-color);
-  width: min(35vw, 30rem);
+  width: min(35vw, 20rem);
   transition: fill 250ms ease-in-out;
 }
 
