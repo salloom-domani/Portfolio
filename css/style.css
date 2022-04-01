@@ -9,6 +9,7 @@
   --color-dark-grey: #333;
   --color-black: #37352f;
   --color-blue: #337ea9;
+  --color-purple: #9065b0;
   --color-green: #478563;
 }
 
@@ -241,6 +242,12 @@ body {
   }
 }
 
+/* Project */
+
+.project {
+  color: var(--color-purple);
+  text-decoration-color: var(--text-color);
+}
 
 /* FontAwesome */
 
