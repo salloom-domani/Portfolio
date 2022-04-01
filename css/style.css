@@ -148,6 +148,13 @@ body {
   }
 }
 
+
+.main__title {
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+}
+
+
 /* Article */
 
 .article {
@@ -236,13 +243,6 @@ body {
   }
 }
 
-
-/* My Name */
-
-.my-name {
-  font-size: var(--font-size-h1);
-  font-weight: bold;
-}
 
 /* FontAwesome */
 
