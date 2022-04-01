@@ -1,17 +1,11 @@
 function toggleDark() {
   html.style.setProperty("--background-color", "#222");
   html.style.setProperty("--text-color", "#fff");
-
-  darkCover.style.setProperty("opacity", 0);
-  lightCover.style.setProperty("opacity", 1);
 }
 
 function toggleLight() {
   html.style.setProperty("--background-color", "#fff");
   html.style.setProperty("--text-color", "#37352f");
-
-  darkCover.style.setProperty("opacity", 1);
-  lightCover.style.setProperty("opacity", 0);
 }
 
 function toggleIcon() {
@@ -32,8 +26,6 @@ function setActive() {
 const html = document.querySelector("html");
 const toggleDarkBtn = document.getElementById("toggle-dark-mode");
 const toggleMoon = document.querySelector(".toggle-moon");
-const darkCover = document.getElementById("dark-cover");
-const lightCover = document.getElementById("light-cover");
 const moon = document.querySelector(".fa-moon");
 
 toggleDarkBtn.dark = false;

@@ -98,7 +98,14 @@ body {
 
 /* Cover */
 
+#cover-logo {
+  fill: var(--background-color);
+  width: min(35vw, 30rem);
+  transition: fill 250ms ease-in-out;
+}
+
 .cover {
+  background-color: var(--text-color);
   width: 100%;
   height: 30vh;
   position: relative;
