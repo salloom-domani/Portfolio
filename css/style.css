@@ -78,6 +78,12 @@ body {
 
 /* Block */
 
+/* Top banner */
+
+.top-banner {
+  position: relative;
+}
+
 /* Cover */
 
 .cover {
@@ -110,40 +116,32 @@ body {
 
 .self-pic {
   position: absolute;
-  width: 10rem;
+  width: 12rem;
   left: 12vw;
-  top: min(22vh, 40rem);
-}
-
-.self-pic img {
+  bottom: -6rem;
   border-radius: 10px;
 }
 
-@media screen and (min-width: 426px) {
-  .self-pic {
-    width: 12rem;
-  }
-}
 
 @media screen and (min-width: 768px) {
   .self-pic {
     width: 15rem;
-    max-width: 20rem;
+    bottom: -7.5rem;
     left: 25%;
-    top: 25vh;
   }
 }
 
 /* Main */
 
 .main {
-  padding: 5vw 12vw;
+  padding-top: 3rem;
+  padding-inline: 12vw;
   overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
   .main {
-    padding-top: 5vw;
+    padding-top: 5rem;
     padding-left: 25%;
   }
 }
