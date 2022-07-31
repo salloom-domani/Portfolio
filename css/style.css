@@ -238,6 +238,11 @@ body::-webkit-scrollbar-thumb {
   padding-left: 2rem;
 }
 
+.sublist {
+  list-style: lower-alpha;
+  margin-block: 0.25rem 0.75rem;
+}
+
 .article__list > li {
   margin: 1rem 0;
 }
